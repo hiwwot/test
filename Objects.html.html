@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<body style="background-color:  #fffff2;">
+	  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</body>
+
+
+
+<style>
+    .Separate{
+position: relative;
+left: 100px;
+top: 400px;
+    }
+
+
+</style>
+<head>
+    <style>
+        /* Hide the images by default */
+        .image {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <button id="toggleButton" class="Separate">Objects</button>
+    <img class="image" src="https://cdn.glitch.global/417118a0-6004-4ded-88d3-27d09f12c7e8/05.png?v=1691549822351" alt="Image 1">
+    <img class="image" src="https://cdn.glitch.global/417118a0-6004-4ded-88d3-27d09f12c7e8/04.png?v=1691549819625" alt="Image 2">
+    <img class="image" src="https://cdn.glitch.global/417118a0-6004-4ded-88d3-27d09f12c7e8/01.png?v=1691549816694" alt="Image 3">
+    <img class="image" src="https://cdn.glitch.global/417118a0-6004-4ded-88d3-27d09f12c7e8/06.png?v=1691549825592" alt="Image 4">
+    
+     
+</body>
+
+
+
+</html>
+
+
+
+<html>
+<head>
+    <style>
+        /* Hide the images by default */
+        .image {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    
+    <img class="image" src="https://cdn.glitch.global/417118a0-6004-4ded-88d3-27d09f12c7e8/08.png?v=1691553312318" alt="Image 1">
+    <img class="image" src="https://cdn.glitch.global/417118a0-6004-4ded-88d3-27d09f12c7e8/09.png?v=1691553314555" alt="Image 2">
+    <img class="image" src="https://cdn.glitch.global/417118a0-6004-4ded-88d3-27d09f12c7e8/013.png?v=1691553322938" alt="Image 3">
+    
+     <script>
+        const toggleButton = document.getElementById('toggleButton');
+        const images = document.querySelectorAll('.image');
+        let currentImageIndex = 0;
+        
+        // Show the first image initially
+        images[0].style.display = 'block';
+
+        toggleButton.addEventListener('click', function() {
+            images[currentImageIndex].style.display = 'none'; // Hide the current image
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            images[currentImageIndex].style.display = 'block'; // Show the next image
+        });
+    </script>
+</body>
+
+</html>
+
+
+
+
+
+<html>
+
+<html>
+<head>
+    <title>Change Image and Return to Original Location</title>
+    <style>
+        .enlarged {
+            width: 200px; /* Initial width */
+            position: relative;
+            left: 500px; /* Initial left position */
+            top: 100px; /* Initial top position */
+            transition: width 1s ease-in-out, left 1s ease-in-out, top 1s ease-in-out;
+        }
+        .button-container {
+          
+            margin-top: 350px; /* Add some top margin */
+             margin-left: 350px; /* Add some top margin */
+        }
+ </style>
+</head>
+
+
+<script>
+        var imageIndex = 0;
+        var imageSources = [
+            "https://cdn.glitch.global/417118a0-6004-4ded-88d3-27d09f12c7e8/02.png?v=1691551595385",
+            "https://cdn.glitch.global/417118a0-6004-4ded-88d3-27d09f12c7e8/03.png?v=1691551597955",
+            "https://cdn.glitch.global/417118a0-6004-4ded-88d3-27d09f12c7e8/07.jpg?v=1691551602626",
+        ];
+        var imageClicked = false;
+    function toggleImageSizeAndPosition() {
+            var image = document.getElementById("myImage");
+            if (!imageClicked) {
+                imageClicked = true;
+                image.style.width = "400px"; // Enlarge width
+                image.style.left = "300px"; // Change left position
+                image.style.top = "350px"; // Change top position
+            } else {
+                if (image.classList.contains("enlarged")) {
+                    image.classList.remove("enlarged");
+                    image.style.width = "200px"; // Reset width
+                } else {
+                    image.classList.add("enlarged");
+                    image.style.width = "400px"; // Enlarge width
+                }
+            }
+        }
+        
+        function changeImageAndReset() {
+            var image = document.getElementById("myImage");
+            if (imageClicked) {
+                imageIndex = (imageIndex + 1) % imageSources.length; // Cycle through images
+                image.src = imageSources[imageIndex]; // Change image source
+            }
+        }
+    </script>
+    <body>
+
+<img id="myImage" src="https://cdn.glitch.global/417118a0-6004-4ded-88d3-27d09f12c7e8/02.png?v=1691551595385" alt="Image" class="enlarged" onclick="toggleImageSizeAndPosition()">
+<br>
+
+    <button class="button-container" onclick="changeImageAndReset()">Assembled</button>
+
+</body>
+
+
+
+
+
+<head>
+
+
+<style>
+        .hidden-text {
+            display: none; /* Hide the text initially */
+        }
+
+      
+    .revealButton {
+   position: relative;
+   left: 500px;
+    bottom: 500px;
+    width: 200px;
+    padding: 10px;
+
+}
+
+.hidden-text {
+	position: relative;
+    display: none;
+    border: 1px solid #ccc;
+    padding: 15px;
+    background-color: #f5f5f5;
+    width: 300px;
+     left: 900px;
+    bottom: 450px;
+}
+    </style>
+    </head>
+
+<body>
+
+<button id="revealButton" class="revealButton"><h2>
+            Fluid Aggregates
+          </h2>
+         </button>
+    <div id="hiddenText" class="hidden-text">
+         <p >
+                  By applying geometric studies by establishing catalogs of abstract
+      geometries upon taking spheres and lines as a reference. These abstract
+      geometries were populated with certain rule sets and logic. The rulesets
+      can be operative based on procedural modeling techniques such as
+      procedural deformation, mirror, duplication.
+          </p>
+    </div>
+   <!-- Add this inside the <script> tag -->
+<script>
+    const revealButton = document.getElementById('revealButton');
+    const hiddenText = document.getElementById('hiddenText');
+
+    revealButton.addEventListener('click', () => {
+        hiddenText.style.display = 'block'; // Change the display to reveal the text
+    });
+</script>
+</body>
+</html>
+</html>
+
+
+
+<html>
+<head>
+
+ <style>
+    .switch{
+position: relative;
+
+left: 500px;
+bottom: 700px;
+    }
+</style>
+
+
+<body>
+<a href="file:///C:/Users/assef/Desktop/Final/ForPortfolio.html">
+<img class="switch"  src="https://cdn.glitch.global/417118a0-6004-4ded-88d3-27d09f12c7e8/home.png?v=1691554452360" style="width: 20px; height: 20px;"/>
+</a>
+</body>
+	
+</head>
+
+</html>
+
+
+</html>
